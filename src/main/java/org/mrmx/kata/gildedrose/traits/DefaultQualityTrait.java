@@ -18,9 +18,9 @@ public class DefaultQualityTrait implements UpdatableTrait {
 	}
 
 	protected void updateQuality(Item item, int quality) {
-		if (quality >= 0 && quality <= MAX_QUALITY) {
-			item.setQuality(quality);
-		}
+		quality = Math.max(0, quality);
+		quality = Math.min(MAX_QUALITY,quality);
+		item.setQuality(quality);		
 	}
 
 	protected int getQualityChangeRate(Item item) {
