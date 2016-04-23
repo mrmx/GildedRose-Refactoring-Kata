@@ -3,6 +3,7 @@ package org.mrmx.kata.gildedrose;
 import org.mrmx.kata.gildedrose.traits.AgedBrieQualityTrait;
 import org.mrmx.kata.gildedrose.traits.DefaultQualityTrait;
 import org.mrmx.kata.gildedrose.traits.DefaultSellInTrait;
+import org.mrmx.kata.gildedrose.traits.SulfurasQualityTrait;
 
 /**
  * Item factory
@@ -25,4 +26,10 @@ public class ItemFactory {
 		return new UpdatableItem(name, sellIn, quality)
 				.withTrait(new DefaultSellInTrait());
 	}
+
+	public UpdatableItem newSulfurasHandOfRagnaros(int sellIn) {
+		return new UpdatableItem("Sulfuras, Hand of Ragnaros", sellIn, 80)
+				.withTrait(new SulfurasQualityTrait());
+	}
+
 }
