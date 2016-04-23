@@ -2,20 +2,62 @@ package com.gildedrose;
 
 public class Item {
 
-    public String name;
+	private String name;
 
-    public int sellIn;
+	private int sellIn;
 
-    public int quality;
+	private int quality;
 
-    public Item(String name, int sellIn, int quality) {
-        this.name = name;
-        this.sellIn = sellIn;
-        this.quality = quality;
-    }
+	public Item(String name, int sellIn, int quality) {
+		this.name = name;
+		this.sellIn = sellIn;
+		this.quality = quality;
+	}
 
-   @Override
-   public String toString() {
-        return this.name + ", " + this.sellIn + ", " + this.quality;
-    }
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the sellIn
+	 */
+	public int getSellIn() {
+		return sellIn;
+	}
+
+	/**
+	 * @param sellIn the sellIn to set
+	 */
+	public void setSellIn(int sellIn) {
+		this.sellIn = sellIn;
+	}
+
+	/**
+	 * @return the quality
+	 */
+	public int getQuality() {
+		return quality;
+	}
+
+	/**
+	 * @param quality the quality to set
+	 */
+	public void setQuality(int quality) {
+		this.quality = quality;
+	}
+
+	@Override
+	public String toString() {
+		return this.getName() + ", " + this.getSellIn() + ", " + this.getQuality();
+	}
 }
