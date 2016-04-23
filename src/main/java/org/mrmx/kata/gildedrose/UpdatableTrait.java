@@ -4,9 +4,10 @@ import com.gildedrose.Item;
 
 /**
  * Updatable trait
- * 
+ *
  * @author mrmx
  */
 public interface UpdatableTrait {
+
 	void update(Item item);
 }

@@ -24,7 +24,7 @@ public class UpdatableItem extends Item {
 	
 	public void update() {
 		for(UpdatableTrait trait : traits) {
-			//System.out.println("Updating with trait " + trait.getClass().getSimpleName() + " " + this);
+			System.out.println("Updating with trait " + trait.getClass().getSimpleName() + " " + this);
 			trait.update(this);
 		}
 	}
