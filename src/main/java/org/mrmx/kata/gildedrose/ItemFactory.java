@@ -1,5 +1,6 @@
 package org.mrmx.kata.gildedrose;
 
+import org.mrmx.kata.gildedrose.traits.ConjuredQualityTrait;
 import org.mrmx.kata.gildedrose.traits.AgedBrieQualityTrait;
 import org.mrmx.kata.gildedrose.traits.BackstagePassQualityTrait;
 import org.mrmx.kata.gildedrose.traits.DefaultQualityTrait;
@@ -36,5 +37,10 @@ public class ItemFactory {
 				.withTrait(new DefaultSellInTrait());
 	}
 
+	public UpdatableItem newConjuredItem(String name,int sellIn, int quality) {
+		return new UpdatableItem(name, sellIn, quality)
+				.withTrait(new ConjuredQualityTrait())
+				.withTrait(new DefaultSellInTrait());
+	}
 
 }

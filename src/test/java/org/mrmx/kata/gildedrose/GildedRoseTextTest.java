@@ -56,6 +56,14 @@ public class GildedRoseTextTest {
 		assertEquals("after 5 days", "Backstage passes to a TAFKAL80ETC concert, 0, 50",
 				describeItem(factory.newBackstagePassItem("Backstage passes to a TAFKAL80ETC concert", 5, 49), DAYS));
 	}
+	
+	@Test
+	public void testConjure() {
+		assertEquals("after 5 days", "Conjured Mana Cake, -2, 0",
+				describeItem(factory.newConjuredItem("Conjured Mana Cake", 3, 6), DAYS));
+		assertEquals("after 5 days", "Conjured Rain Cake, -2, 40",
+				describeItem(factory.newConjuredItem("Conjured Rain Cake", 3, 50), DAYS));
+	}
 
 	String describeItem(UpdatableItem item, int days) {
 		app.add(item);
